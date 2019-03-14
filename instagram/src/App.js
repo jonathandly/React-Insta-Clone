@@ -3,20 +3,22 @@ import React, { Component } from 'react';
 import './App.css';
 
 import dummyData from  './dummy-data';
+import SearchBar from './components/SearchBar/SearchBar';
+import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      dummyData: dummyData
     }
   }
   render() {
     return (
       <div className="App">
-        {/* {console.log(this.state.data)} */}
-        
+        <SearchBar />
+        <PostContainer dummyData={this.state.dummyData} />
       </div>
     );
   }
