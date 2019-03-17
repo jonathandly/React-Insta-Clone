@@ -1,0 +1,38 @@
+.thumbnail-username {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 85px;
+    margin-bottom: 5%;
+}
+
+.post-thumbnail {
+    border-radius: 80px;
+    height: 50px;
+}
+
+.username {
+    padding: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: Roboto;
+}
+
+.icons-div {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 85px;
+    margin-top: 10px;
+}
+
+.likes-div {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 85px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.message-icon {
+    padding-left: 10px;
+}

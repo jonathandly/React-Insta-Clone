@@ -1,0 +1,12 @@
+.comment-div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+.comment-username {
+    font-weight: bold;
+    padding-right: 10px;
+    margin-left: 5px;
+}

@@ -1,22 +1,32 @@
 import React from 'react';
 
+import CommentSection from '../CommentSection/CommentSection';
+import PostHeader from './PostHeader'; 
+import './PostContainer.css';
+
+import { Heart, MessageCircle } from 'react-feather';
 
 const Post = props => {
     return ( 
         <div>
-        {props.dummyData.map(image => (
-            <div key={image.likes}>
+            <PostHeader 
+                username={props.post.username}
+                thumbnailUrl={props.post.thumbnailUrl}
+            />
+            <div>
                 <img 
-                    src={image.thumbnailUrl} 
-                    alt={image.username}
+                    src={props.post.imageUrl}
+                    className="post-image"
+                    alt="user post img"
                 />
-                <img 
-                    src={image.imageUrl} 
-                    alt={image.username}
-                />
-                {image.likes}
             </div>
-        ))}
+            <div className="icons-div">
+                <Heart className="heart-icon" />
+                <MessageCircle className="message-icon" />
+                {/* <MoreHorizontal /> */}
+            </div>
+            <div className="likes-div">{props.post.likes} likes</div>
+            <CommentSection comments={props.post.comments} />
         </div>
     );
 }
