@@ -15,12 +15,14 @@ class CommentSection extends React.Component {
 
     
     componentDidMount() {
-        let id = this.props.postId;
-        if(localStorage.getItem(id)) {
-            this.setState({ comments: JSON.parse(localStorage.getItem(this.props.postId)) });
-        } else {
-            this.saveToLocalStorage();
-        }
+        // let id = this.props.postId;
+        
+        // if(localStorage.getItem('comments')) {
+        //     this.setState({ comments: JSON.parse(localStorage.getItem(this.props.postId)) });
+        // } else {
+        //     this.saveToLocalStorage();
+        // }
+        localStorage.getItem('comments');
     }
     
     componentWillUnmount() {
@@ -28,7 +30,8 @@ class CommentSection extends React.Component {
     }
 
     saveToLocalStorage = _ => {
-        localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments));
+        // localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments));
+        localStorage.setItem('comments', JSON.stringify(this.state.comments));
     }
 
     addNewComment = e => {
@@ -43,6 +46,7 @@ class CommentSection extends React.Component {
 
     handleCommentChange = e => {
         this.setState({ comment: e.target.value });
+        this.saveToLocalStorage();
     }
 
     render() {
