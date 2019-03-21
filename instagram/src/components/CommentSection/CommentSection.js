@@ -15,38 +15,32 @@ class CommentSection extends React.Component {
 
     
     componentDidMount() {
-        // let id = this.props.postId;
+        let id = this.props.postId;
         
-        // if(localStorage.getItem('comments')) {
-        //     this.setState({ comments: JSON.parse(localStorage.getItem(this.props.postId)) });
-        // } else {
-        //     this.saveToLocalStorage();
-        // }
-        localStorage.getItem('comments');
+        if(localStorage.getItem(id)) {
+            this.setState({ comments: JSON.parse(localStorage.getItem(this.props.postId)) });
+        } else {
+            this.saveToLocalStorage();
+        }
     }
-    
+
     componentWillUnmount() {
         this.saveToLocalStorage();
     }
 
     saveToLocalStorage = _ => {
-        // localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments));
-        localStorage.setItem('comments', JSON.stringify(this.state.comments));
+        localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments));
     }
 
     addNewComment = e => {
         e.preventDefault();
         let newComment = {text: this.state.comment, username: 'jonathan'};
-
-        let comments = this.state.comments.slice();
-        comments.push(newComment);
-        this.setState({ comments, comment: '' });
-        this.saveToLocalStorage();
+        this.setState({ comments: [...this.state.comments, newComment]}, () => this.saveToLocalStorage());
+        this.setState({ comment: '' });
     }
 
     handleCommentChange = e => {
         this.setState({ comment: e.target.value });
-        this.saveToLocalStorage();
     }
 
     render() {

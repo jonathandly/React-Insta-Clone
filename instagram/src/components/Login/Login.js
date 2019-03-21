@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Login.css';
+
 class Login extends React.Component {
 
     login() {
@@ -9,7 +11,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="form-div">
                 <form>
                     <input 
                         className="username-login"
