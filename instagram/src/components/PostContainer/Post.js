@@ -2,7 +2,7 @@ import React from 'react';
 
 import CommentSection from '../CommentSection/CommentSection';
 import PostHeader from './PostHeader'; 
-import './PostContainer.css';
+// import './PostContainer.css';
 import HeartMessageIcons from './HeartMessageIcons';
 
 class Post extends React.Component {
