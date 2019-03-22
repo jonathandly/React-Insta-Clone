@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Heart, MessageCircle } from 'react-feather';
 // import styled from 'styled-components';
-import { Icons, Likes, MessageDiv } from './styles';
+import { Icons, Likes, MessageDiv } from './postContainerStyles';
 
 // const Icons = styled.div`
 //     display: flex;

@@ -2,7 +2,7 @@ import React from 'react';
 
 // import './PostContainer.css';
 // import styled from 'styled-components';
-import { ThumbnailDiv, UsernameDiv, ThumbnailImage } from './styles';
+import { ThumbnailDiv, UsernameDiv, ThumbnailImage } from './postContainerStyles';
 
 // const ThumbnailDiv = styled.div`
 //     display: flex;
