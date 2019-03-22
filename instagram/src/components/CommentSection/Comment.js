@@ -1,14 +1,14 @@
 import React from 'react';
 
-import './CommentSection.css';
+import { CommentDiv, CommentUsername, CommentText } from './commentSectionStyles';
 import PropTypes from 'prop-types';
 
 const Comment = props => {
     return (
-            <div className="comment-div">
-                <span className="comment-username">{props.comment.username}</span>
-                <span className="comment-text">{props.comment.text}</span>
-            </div>
+            <CommentDiv>
+                <CommentUsername>{props.comment.username}</CommentUsername>
+                <CommentText>{props.comment.text}</CommentText>
+            </CommentDiv>
     );
 }
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import img from './instagram24x24.png';
 

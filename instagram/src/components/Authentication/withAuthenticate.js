@@ -21,12 +21,6 @@ const withAuthenticate = WrappedComponent1 => WrappedComponent2 => {
             } else {
                 return <WrappedComponent2 />
             }
-            // return (
-            //     <div>
-            //         <WrappedComponent1 /> 
-            //         <WrappedComponent2 />
-            //     </div>
-            // );
         }
     }
 }

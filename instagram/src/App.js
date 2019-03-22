@@ -1,38 +1,33 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
-import './App.css';
 import PostsPage from './components/PostContainer/PostsPage';
-
-// import dummyData from  './dummy-data';
-// import SearchBar from './components/SearchBar/SearchBar';
-// import PostContainer from './components/PostContainer/PostContainer';
-import withAuthenticate from './components/Authentication/withAuthenticate';
 import Login from './components/Login/Login';
+import withAuthenticate from './components/Authentication/withAuthenticate';
 
 const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login);
+
+const AppDiv = styled.div`
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+`;
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      filteredPosts: []
     }
   }
-  // componentDidMount() {
-  //   this.setState({ posts: dummyData });
-  // }
-
 
   render() {
     return (
-      <div className="App">
-        {/* <PostsPage />
-        <SearchBar />
-        <PostContainer posts={this.state.posts} /> */}
+      <AppDiv>
         <ComponentFromWithAuthenticate />
-
-      </div>
+      </AppDiv>
     );
   }
 }
