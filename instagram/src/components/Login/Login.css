@@ -1,26 +1,26 @@
-html {
+/* html {
     background: papayawhip;
-}
+} */
 
-.form-div {
-    /* padding: 15px; */
+/* .form-div {
+    padding: 15px;
     margin: 5% auto;
     width: 50vw;
     height: 120vh;
-    /* background: papayawhip; */
-}
-.form-div:hover {
+    background: papayawhip;
+} */
+/* .form-div:hover {
     cursor: url('./instagram24x24.png') 12 12, pointer;
-}
+} */
 
-form {
+/* form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
-button {
+/* button {
     width: 135px;
     height: 30px;
     border-radius: 15px;
@@ -28,35 +28,35 @@ button {
     color: firebrick;
     margin-top: 2%;
     font-size: 18px;
-}
-button:hover {
+} */
+/* button:hover {
     cursor: pointer;
-}
+} */
 
-.username-login {
+/* .username-login {
     margin: 15px 0;
     height: 20px;
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid palevioletred;
-}
+} */
 
-.username-login::placeholder {
+/* .username-login::placeholder {
     padding-left: 5px;
     color: lightsteelblue;
     font-size: 16px;
-}
+} */
 
-.password-login {
+/* .password-login {
     margin: 15px 0;
     height: 20px;
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid palevioletred;
-}
+} */
 
-.password-login::placeholder {
+/* .password-login::placeholder {
     padding-left: 5px;
     color: lightsteelblue;
     font-size: 16px;
-}
+} */
